@@ -1,3 +1,5 @@
+## This modules contain core encryption/decryption fuctions for RSA
+
 module Crypt
 
 export encrypt, decrypt, generate_key, pack, unpack, generate_e, bezout, fmod, generate_primes, prime_check_fermat, generate_random
