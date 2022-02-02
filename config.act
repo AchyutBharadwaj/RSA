@@ -1,0 +1,80 @@
+set path
+  cipher text = encrypted_text.txt
+  public key = public_key.txt
+  private key = private_key.txt
+  receiver key = public_key.txt
+  mail module = mail.py
+  slides = RSA.pdf
+  presentation = RSA-presentation.pdf
+  status = status.txt
+end
+
+set alias
+  RSA Material = slides,presentation
+  keys = public key,private key
+end
+
+set functions
+  generate = 2
+  Encrypt = 2
+  Decrypt = 0
+  status = 0
+  debug = 0
+  exit = 0
+  mail = 2
+  request = 2
+  run = 1
+  update = 0
+  c = 0
+end
+
+set emails
+  sender = achyut.22068@gear.ac.in
+  achyub@gmail.com = Achyut Bharadwaj
+  achyut.22068@gear.ac.in = Achyut Bharadwaj
+  fadeel.22146@gear.ac.in = Fadeel Khan
+  medhajit.22004@gear.ac.in = Medhajit Deb
+  ravi.srikantiah@gmail.com = Ravi Srikantiah
+  pallavi.n.rao@gmail.com = Pallavi Rao
+  vax.notifier@gmail.com = CoWIN Notifier
+  atharv.22042@gear.ac.in = Atharv Kumar
+  akshata.22120@gear.ac.in = Akshata Amara
+end
+
+set key_access
+  default = fadeel
+  fadeel = 11Fl4NziTLrsaOFYXqIcZRpu1s9HcYbzJ
+  me = 1DGSIp2L4WFWFGiXoOr8Lg1o2HYsSdTlG
+end
+
+set nicknames
+  fadeel = fadeel.22146@gear.ac.in
+  debbie = medhajit.22004@gear.ac.in
+  crypto = fadeel.22146@gear.ac.in,medhajit.22004@gear.ac.in
+  family = achyut.22068@gear.ac.in,achyub@gmail.com,ravi.srikantiah@gmail.com,pallavi.n.rao@gmail.com
+  me = achyut.22068@gear.ac.in,achyub@gmail.com
+end
+
+pass_attempts = 5
+
+set default
+  set generate
+    bits = 1024
+    cycles = 10
+  end
+  set Encrypt
+    message = Hello!
+    block size = 10
+  end
+  set mail
+    subject = public key
+    emails = achyub@gmail.com
+  end
+  set request
+    subject = public key
+    emails = achyub@gmail.com
+  end
+  set run
+    default = julia
+  end
+end
