@@ -9,8 +9,6 @@ using Mail
 using PyCall
 
 pushfirst!(PyVector(pyimport("sys")["path"]), "")
-drive = pyimport("drive")
-
 
 function funcs(input, vars, settings, DEBUG) #Call function as in input
   eval(Expr(:call, Symbol(input[1]), input[2:end], vars, settings, DEBUG))
